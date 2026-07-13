@@ -1,0 +1,50 @@
+.register {
+  min-height: 100vh;
+  background: #f5f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  &__card {
+    width: 460px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  &__logo {
+    width: 300px;
+    height: 70px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  &__subtitle {
+    display: block;
+    text-align: center;
+    color: #888;
+    margin-bottom: 25px;
+  }
+
+  &__footer {
+    margin-top: 20px;
+    text-align: center;
+
+    a {
+      margin-left: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+}
+
+.ant-input-affix-wrapper {
+  height: 45px;
+  border-radius: 8px;
+}
+
+.ant-btn {
+  height: 45px;
+  border-radius: 8px;
+}

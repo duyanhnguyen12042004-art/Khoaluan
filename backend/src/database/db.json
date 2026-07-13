@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "f9pWnD7xCDdUgtugt5ZH3",
+      "fullname": "Nguyễn Văn A",
+      "email": "a@gmail.com",
+      "phone": "0988888888",
+      "password": "$2b$10$bgPWe5iiRJPldEA.kjqz.O3LktNVZiTwYsYXTsxkTVn/pW4UZLqse"
+    },
+    {
+      "id": "HohWMxRm4yb6nQweD-XBa",
+      "fullname": "Nguyễn Duy Anh",
+      "email": "nguyenduyanh12042004@gmail.com",
+      "phone": "0816311304",
+      "password": "$2b$10$ZN5kK15cTtW6tMC8les7wuYHigeTC9rNnC9F0pqKxz9zVQ/KXDpVO"
+    }
+  ]
+}
