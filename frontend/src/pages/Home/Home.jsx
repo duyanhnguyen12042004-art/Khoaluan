@@ -1,19 +1,49 @@
 import "./Home.scss";
 
+import { useEffect, useState } from "react";
+import Banner from "../../component/Banner/Banner";
+import ProductCard from "../../component/ProductCard/ProductCard";
+import { getAllProducts } from "../../services/productApi";
+
 function Home() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    loadProducts();
+  }, []);
+
+  const loadProducts = async () => {
+    try {
+      const data = await getAllProducts();
+      setProducts(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="home">
-      <section className="home__banner">Banner</section>
+      <Banner />
 
-      <section className="home__breadcrumb">Breadcrumb</section>
+      <section className="home-section">
+        <h2>Sản phẩm bán chạy</h2>
 
-      <section className="home__category">Danh mục sản phẩm</section>
+        <div className="product-list">
+          {products.slice(0, 4).map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
 
-      <section className="home__filter">Bộ lọc</section>
+      <section className="home-section">
+        <h2>Sản phẩm mới</h2>
 
-      <section className="home__products">Danh sách sản phẩm</section>
-
-      <section className="home__pagination">Phân trang</section>
+        <div className="product-list">
+          {products.slice(0, 4).map((product) => (
+            <ProductCard key={`new-${product.id}`} product={product} />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

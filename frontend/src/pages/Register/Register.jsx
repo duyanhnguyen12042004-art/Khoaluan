@@ -23,6 +23,7 @@ function Register() {
     try {
       // Không gửi confirmPassword và agree lên backend
       const registerData = {
+        username: values.username,
         fullname: values.fullname,
         email: values.email,
         phone: values.phone,
@@ -47,6 +48,21 @@ function Register() {
         <Text className="register__subtitle">Tạo tài khoản mới</Text>
 
         <Form layout="vertical" onFinish={onFinish} className="register__form">
+          {/* Username */}
+          <Form.Item
+            label="Tên đăng nhập"
+            name="username"
+            rules={[
+              {
+                required: true,
+                message: "Vui lòng nhập tên đăng nhập!",
+              },
+            ]}
+          >
+            <Input prefix={<UserOutlined />} placeholder="Nhập tên đăng nhập" />
+          </Form.Item>
+
+          {/* fullname */}
           <Form.Item
             label="Họ và tên"
             name="fullname"
@@ -60,6 +76,7 @@ function Register() {
             <Input prefix={<UserOutlined />} placeholder="Nhập họ và tên" />
           </Form.Item>
 
+          {/* email */}
           <Form.Item
             label="Email"
             name="email"
@@ -77,6 +94,7 @@ function Register() {
             <Input prefix={<MailOutlined />} placeholder="Nhập Email" />
           </Form.Item>
 
+          {/* số điện thoại */}
           <Form.Item
             label="Số điện thoại"
             name="phone"
@@ -93,6 +111,7 @@ function Register() {
             />
           </Form.Item>
 
+          {/* mật khẩu */}
           <Form.Item
             label="Mật khẩu"
             name="password"
@@ -113,6 +132,7 @@ function Register() {
             />
           </Form.Item>
 
+          {/* xác nhận mật khẩu */}
           <Form.Item
             label="Xác nhận mật khẩu"
             name="confirmPassword"
@@ -141,6 +161,7 @@ function Register() {
             />
           </Form.Item>
 
+          {/* điều khoản */}
           <Form.Item
             name="agree"
             valuePropName="checked"

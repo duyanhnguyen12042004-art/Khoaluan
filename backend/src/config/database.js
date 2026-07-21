@@ -15,6 +15,9 @@ const adapter = new JSONFile(file);
 // Dữ liệu mặc định
 const defaultData = {
   users: [],
+  products: [],
+  orders: [],
+  reviews: [],
 };
 
 const db = new Low(adapter, defaultData);

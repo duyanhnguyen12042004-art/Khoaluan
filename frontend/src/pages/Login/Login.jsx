@@ -7,11 +7,14 @@ import { LockOutlined, MailOutlined, GoogleOutlined } from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";
 import { message } from "antd";
 import { login } from "../../services/authApi";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 const { Text } = Typography;
 
 function Login() {
   const navigate = useNavigate();
+  const { login: authLogin } = useContext(AuthContext);
 
   const onFinish = async (values) => {
     try {
@@ -20,13 +23,13 @@ function Login() {
       // Lưu token
       localStorage.setItem("token", res.data.token);
 
-      // Lưu thông tin người dùng
-      localStorage.setItem("user", JSON.stringify(res.data.user));
+      // Lưu user vào AuthContext
+      authLogin(res.data.user);
 
       message.success(res.data.message);
 
       // Chuyển sang trang chủ
-      navigate("/Home");
+      navigate("/home");
     } catch (error) {
       message.error(error.response?.data?.message || "Đăng nhập thất bại");
     }

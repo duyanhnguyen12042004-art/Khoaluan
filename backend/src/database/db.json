@@ -1,18 +1,538 @@
 {
   "users": [
     {
-      "id": "f9pWnD7xCDdUgtugt5ZH3",
-      "fullname": "Nguyễn Văn A",
-      "email": "a@gmail.com",
-      "phone": "0988888888",
-      "password": "$2b$10$bgPWe5iiRJPldEA.kjqz.O3LktNVZiTwYsYXTsxkTVn/pW4UZLqse"
-    },
-    {
-      "id": "HohWMxRm4yb6nQweD-XBa",
-      "fullname": "Nguyễn Duy Anh",
+      "id": "admin001",
+      "username": "admin",
+      "fullname": "Duy Anh",
       "email": "nguyenduyanh12042004@gmail.com",
       "phone": "0816311304",
-      "password": "$2b$10$ZN5kK15cTtW6tMC8les7wuYHigeTC9rNnC9F0pqKxz9zVQ/KXDpVO"
+      "password": "$2b$10$9BxrQfOJouHj6xLcQhnHfOUYZJJkXhtItG6q8p5GNTB.JonNkxrX6",
+      "role": 1,
+      "created_at": "2026-07-19T10:00:00Z"
+    },
+    {
+      "id": "nqHjYMvkYWB81uO6qf-Na",
+      "username": "duyanh2004",
+      "fullname": "Nguyễn Duy Anh",
+      "email": "duyanh@gmail.com",
+      "phone": "0936472835",
+      "password": "$2b$10$uBidzC7y9JAuyclFdc/rzeKY6GYfSdn0PcWD8KsPYIL6/SmcB.rP6",
+      "role": 2,
+      "created_at": "2026-07-19T10:44:53.728Z"
     }
-  ]
+  ],
+  "products": [
+    {
+      "id": "P001",
+      "name": "Áo thun",
+      "price": 299000,
+      "description": "Áo thun nam phong cách trẻ trung.",
+      "variants": [
+        {
+          "color": "Đen",
+          "colorCode": "#000000",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        },
+        {
+          "color": "Trắng",
+          "colorCode": "#ffffff",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "category": "Áo",
+      "stock": 20,
+      "sold": 33,
+      "rating": 4.5,
+      "created_at": "2026-07-19T10:00:00.000Z"
+    },
+    {
+      "id": "P002",
+      "name": "Áo sơ mi nữ",
+      "price": 459000,
+      "description": "Áo sơ mi nữ phong cách Hàn Quốc.",
+      "variants": [
+        {
+          "color": "Trắng",
+          "colorCode": "#ffffff",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        },
+        {
+          "color": "Đen",
+          "colorCode": "#000000",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        },
+        {
+          "color": "Xanh",
+          "colorCode": "#4a90e2",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "category": "Áo",
+      "stock": 48,
+      "sold": 12,
+      "rating": 4,
+      "created_at": "2026-07-20T09:10:00.000Z"
+    },
+    {
+      "id": "P003",
+      "name": "Quần jean",
+      "price": 599000,
+      "description": "Quần jean nam phong cách trẻ trung.",
+      "variants": [
+        {
+          "color": "Xanh đậm",
+          "colorCode": "#1a237e",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        },
+        {
+          "color": "Xanh nhạt",
+          "colorCode": "#64b5f6",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "category": "Quần",
+      "stock": 30,
+      "sold": 5,
+      "rating": 4.5,
+      "created_at": "2026-07-21T14:20:00.000Z"
+    },
+    {
+      "id": "P004",
+      "name": "Váy nữ",
+      "price": 699000,
+      "description": "Váy nữ phong cách thanh lịch.",
+      "variants": [
+        {
+          "color": "Hồng",
+          "colorCode": "#f06292",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        },
+        {
+          "color": "Xanh lá",
+          "colorCode": "#81c784",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "category": "Váy",
+      "stock": 20,
+      "sold": 8,
+      "rating": 4.2,
+      "created_at": "2026-07-22T11:30:00.000Z"
+    },
+    {
+      "id": "P005",
+      "name": "Áo khoác nam",
+      "price": 899000,
+      "description": "Áo khoác nam phong cách hiện đại.",
+      "variants": [
+        {
+          "color": "Đen",
+          "colorCode": "#000000",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        },
+        {
+          "color": "Xám",
+          "colorCode": "#9e9e9e",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        }
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "category": "Áo",
+      "stock": 35,
+      "sold": 12,
+      "rating": 4.6,
+      "created_at": "2026-07-23T08:00:00.000Z"
+    },
+    {
+      "id": "P006",
+      "name": "Quần kaki",
+      "price": 499000,
+      "description": "Quần kaki nam chất liệu cao cấp.",
+      "variants": [
+        {
+          "color": "Be",
+          "colorCode": "#d7ccc8",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        },
+        {
+          "color": "Đen",
+          "colorCode": "#000000",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "category": "Quần",
+      "stock": 60,
+      "sold": 20,
+      "rating": 4.4,
+      "created_at": "2026-07-24T09:30:00.000Z"
+    },
+    {
+      "id": "P007",
+      "name": "Đầm dự tiệc",
+      "price": 799000,
+      "description": "Đầm nữ sang trọng dành cho các buổi tiệc.",
+      "variants": [
+        {
+          "color": "Đỏ",
+          "colorCode": "#e53935",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        },
+        {
+          "color": "Đen",
+          "colorCode": "#000000",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "category": "Đầm",
+      "stock": 18,
+      "sold": 7,
+      "rating": 4.8,
+      "created_at": "2026-07-25T13:00:00.000Z"
+    },
+    {
+      "id": "P008",
+      "name": "Áo hoodie",
+      "price": 649000,
+      "description": "Áo hoodie unisex phong cách trẻ trung.",
+      "variants": [
+        {
+          "color": "Trắng",
+          "colorCode": "#ffffff",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        },
+        {
+          "color": "Xanh navy",
+          "colorCode": "#1a237e",
+          "images": [
+            "/images/product1.jpg",
+            "/images/product2.jpg",
+            "/images/product3.jpg",
+            "/images/product4.jpg"
+          ]
+        }
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "category": "Áo",
+      "stock": 40,
+      "sold": 16,
+      "rating": 4.7,
+      "created_at": "2026-07-26T10:00:00.000Z"
+    },
+    {
+      "id": "YKmvtU9dYp1tL22u9bvXG",
+      "name": "Đầm liền nữ",
+      "price": 400000,
+      "description": "Đầm nữ chất liệu cao cấp\n",
+      "variants": [
+        {
+          "color": "Trắng",
+          "colorCode": "#FFFFFF",
+          "images": [
+            "/images/product1.jpg",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "category": "Đầm",
+      "stock": 15,
+      "sold": 0,
+      "rating": 5,
+      "created_at": "2026-07-21T13:57:31.565Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "HzUbesJKzE53a9NponPo8",
+      "userId": "nqHjYMvkYWB81uO6qf-Na",
+      "fullname": "Nguyễn Duy Anh",
+      "phone": "0936472835",
+      "address": "Hà Nội",
+      "payment": "COD",
+      "status": "Confirmed",
+      "total": 598000,
+      "items": [
+        {
+          "productId": "P001",
+          "name": "Áo thun nam",
+          "price": 299000,
+          "quantity": 2,
+          "color": "Đen",
+          "size": "L"
+        }
+      ],
+      "created_at": "2026-07-20T17:04:00.095Z"
+    },
+    {
+      "id": "MgPBJjAe-sbjnon2-hzXb",
+      "userId": "nqHjYMvkYWB81uO6qf-Na",
+      "fullname": "Duy Anh",
+      "phone": "0387263524",
+      "address": ", , , ",
+      "payment": "cod",
+      "status": "Pending",
+      "total": 299000,
+      "items": [
+        {
+          "productId": "P001",
+          "name": "Áo thun",
+          "price": 299000,
+          "quantity": 1,
+          "color": "Đen",
+          "size": "S"
+        }
+      ],
+      "created_at": "2026-07-20T17:56:26.129Z"
+    },
+    {
+      "id": "YeOdYSTaQyzdNY_-GJ54E",
+      "userId": "nqHjYMvkYWB81uO6qf-Na",
+      "fullname": "Duy anh",
+      "phone": "0937463524",
+      "address": "Ha Nam, , , ",
+      "payment": "cod",
+      "status": "Pending",
+      "total": 1356000,
+      "items": [
+        {
+          "productId": "P002",
+          "name": "Áo sơ mi nữ",
+          "price": 459000,
+          "quantity": 1,
+          "color": "Trắng",
+          "size": "S"
+        },
+        {
+          "productId": "P001",
+          "name": "Áo thun",
+          "price": 299000,
+          "quantity": 3,
+          "color": "Đen",
+          "size": "S"
+        }
+      ],
+      "created_at": "2026-07-21T02:42:50.352Z"
+    },
+    {
+      "id": "8S_H5-ECQHBIwwT0TCwEt",
+      "userId": "nqHjYMvkYWB81uO6qf-Na",
+      "fullname": "duy anh",
+      "phone": "0927463524",
+      "address": "Ha Nam, , , ",
+      "payment": "cod",
+      "status": "Pending",
+      "total": 299000,
+      "items": [
+        {
+          "productId": "P001",
+          "name": "Áo thun",
+          "price": 299000,
+          "quantity": 1,
+          "color": "Đen",
+          "size": "S"
+        }
+      ],
+      "created_at": "2026-07-21T02:44:43.091Z"
+    },
+    {
+      "id": "cpvwq5CcLa6kXBSYz22Tz",
+      "userId": "admin001",
+      "fullname": "duy anh",
+      "phone": "0816311304",
+      "address": "Ha Nam, , , ",
+      "payment": "cod",
+      "status": "Pending",
+      "total": 299000,
+      "items": [
+        {
+          "productId": "P001",
+          "name": "Áo thun",
+          "price": 299000,
+          "quantity": 1,
+          "color": "Đen",
+          "size": "S"
+        }
+      ],
+      "created_at": "2026-07-21T02:48:41.954Z"
+    },
+    {
+      "id": "ay4x8LkBEUkrl1I55X2Wq",
+      "userId": "admin001",
+      "fullname": "duy anh",
+      "phone": "0816311304",
+      "address": "Ha Noi, , , ",
+      "payment": "bank",
+      "status": "Pending",
+      "total": 1954000,
+      "items": [
+        {
+          "productId": "P002",
+          "name": "Áo sơ mi nữ",
+          "image": "/images/product1.jpg",
+          "price": 459000,
+          "quantity": 1,
+          "color": "Trắng",
+          "size": "S"
+        },
+        {
+          "productId": "P001",
+          "name": "Áo thun",
+          "image": "/images/product1.jpg",
+          "price": 299000,
+          "quantity": 1,
+          "color": "Trắng",
+          "size": "S"
+        },
+        {
+          "productId": "P001",
+          "name": "Áo thun",
+          "image": "/images/product1.jpg",
+          "price": 299000,
+          "quantity": 3,
+          "color": "Đen",
+          "size": "S"
+        },
+        {
+          "productId": "P001",
+          "name": "Áo thun",
+          "image": "/images/product1.jpg",
+          "price": 299000,
+          "quantity": 1,
+          "color": "Trắng",
+          "size": "L"
+        }
+      ],
+      "created_at": "2026-07-21T18:28:43.414Z"
+    }
+  ],
+  "reviews": []
 }

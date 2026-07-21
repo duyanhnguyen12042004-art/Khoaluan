@@ -1,7 +1,28 @@
 .home {
-  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 80px;
 }
 
-.home section {
+.home-section {
+  margin-top: 70px;
+}
+
+.home-section:first-of-type {
+  margin-top: 50px; /* Banner cách section đầu tiên */
+}
+
+.home-section h2 {
+  font-size: 32px;
+  font-weight: 700;
   margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 340px);
+  justify-content: center;
+  gap: 18px;
 }

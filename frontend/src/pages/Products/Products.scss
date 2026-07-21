@@ -1,0 +1,69 @@
+.products {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 0 80px;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #666;
+    }
+  }
+
+  &__filter {
+    margin-bottom: 40px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+
+    // Select
+    .ant-select {
+      height: 40px;
+
+      .ant-select-selector {
+        height: 40px !important;
+        display: flex;
+        align-items: center;
+        border-radius: 6px;
+      }
+
+      .ant-select-selection-placeholder,
+      .ant-select-selection-item {
+        font-size: 14px;
+      }
+    }
+
+    // Button xóa bộ lọc
+    .ant-btn {
+      height: 40px;
+      width: 180px;
+      padding: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 6px;
+
+      font-size: 14px;
+      font-weight: 400;
+
+      box-shadow: none;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 330px);
+    justify-content: center;
+    gap: 24px;
+  }
+}

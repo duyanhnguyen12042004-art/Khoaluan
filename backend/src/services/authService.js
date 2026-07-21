@@ -6,16 +6,27 @@ import jwt from "jsonwebtoken";
 // Khóa bí mật để tạo JWT
 const SECRET_KEY = "my_secret_key";
 
-// Hàm đăng ký
+// ĐĂNG KÝ
 export async function register(data) {
   await db.read();
 
-  const { fullname, email, phone, password } = data;
+  const { username, fullname, email, phone, password } = data;
 
-  // Kiểm tra email đã tồn tại
-  const exist = db.data.users.find((user) => user.email === email);
+  // Kiểm tra username
+  const existUsername = db.data.users.find(
+    (user) => user.username === username
+  );
 
-  if (exist) {
+  if (existUsername) {
+    throw new Error("Tên đăng nhập đã tồn tại");
+  }
+
+  // Kiểm tra email
+  const existEmail = db.data.users.find(
+    (user) => user.email === email
+  );
+
+  if (existEmail) {
     throw new Error("Email đã tồn tại");
   }
 
@@ -25,13 +36,15 @@ export async function register(data) {
   // Tạo user mới
   const newUser = {
     id: nanoid(),
+    username,
     fullname,
     email,
     phone,
     password: hashPassword,
+    role: 2,
+    created_at: new Date().toISOString(),
   };
 
-  // Lưu vào database
   db.data.users.push(newUser);
 
   await db.write();
@@ -41,31 +54,37 @@ export async function register(data) {
   };
 }
 
-// Hàm đăng nhập
+// ĐĂNG NHẬP
 export async function login(data) {
   await db.read();
 
   const { email, password } = data;
 
-  // Tìm người dùng theo email
-  const user = db.data.users.find((u) => u.email === email);
+  // Tìm user
+  const user = db.data.users.find(
+    (u) => u.email === email
+  );
 
   if (!user) {
     throw new Error("Email không tồn tại");
   }
 
   // So sánh mật khẩu
-  const checkPassword = await bcrypt.compare(password, user.password);
+  const checkPassword = await bcrypt.compare(
+    password,
+    user.password
+  );
 
   if (!checkPassword) {
     throw new Error("Sai mật khẩu");
   }
 
-  // Tạo JWT Token
+  // Sinh JWT
   const token = jwt.sign(
     {
       id: user.id,
       email: user.email,
+      role: user.role,
     },
     SECRET_KEY,
     {
@@ -78,9 +97,11 @@ export async function login(data) {
     token,
     user: {
       id: user.id,
+      username: user.username,
       fullname: user.fullname,
       email: user.email,
       phone: user.phone,
+      role: user.role,
     },
   };
 }

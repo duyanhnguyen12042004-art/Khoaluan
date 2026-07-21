@@ -1,0 +1,22 @@
+.search {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0 20px;
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 330px);
+    justify-content: center;
+    gap: 24px;
+  }
+}

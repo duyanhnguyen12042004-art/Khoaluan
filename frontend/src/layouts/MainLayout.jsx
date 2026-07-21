@@ -13,7 +13,7 @@ function MainLayout() {
 
       <Content
         style={{
-          padding: "30px 60px",
+          minHeight: "100vh",
           background: "#fff",
         }}
       >
